@@ -1,0 +1,24 @@
+environment: production
+server:
+  port: 8080
+  host: 0.0.0.0
+database:
+  host: ${DB_HOST:-localhost}
+  port: ${DB_PORT:-5432}
+  user: ${DB_USER:-greens_user}
+  password: ${DB_PASSWORD:-greens_password}
+  name: ${DB_NAME:-greens_marketplace}
+  sslmode: ${DB_SSLMODE:-disable}
+redis:
+  host: ${REDIS_HOST:-localhost}
+  port: ${REDIS_PORT:-6379}
+  password: ${REDIS_PASSWORD:-}
+  db: ${REDIS_DB:-0}
+jwt:
+  secret: ${JWT_SECRET:-your-super-secret-jwt-key-change-this-in-production}
+  expiration: ${JWT_EXPIRATION:-24}
+openai:
+  api_key: ${OPENAI_API_KEY:-}
+  model: ${OPENAI_MODEL:-text-embedding-ada-002}
+  max_tokens: ${OPENAI_MAX_TOKENS:-1000}
+  temperature: ${OPENAI_TEMPERATURE:-0.7}
